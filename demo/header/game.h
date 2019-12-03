@@ -1,6 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
-
+/******/
 #include <avr/eeprom.h>
 
 #include "customChar.h"
