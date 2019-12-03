@@ -29,7 +29,7 @@ int playerShootTick(int state)
         {
             if(shoot)
             {
-                if(ducking == TRUE)
+                if(dodging == TRUE)
                 {
                     state = WAIT_SHOT; 
                 }
