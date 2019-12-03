@@ -92,7 +92,7 @@ int gameTick(int state)
                 state = SCROLL; 
             }
 
-            if((tmpObstacle[0] == MONSTER && !ducking))
+            if((tmpObstacle[0] == MONSTER && !dodging))
             {
                 LCD_ClearScreen();
                 LCD_DisplayString(1, "Game Over");
@@ -200,7 +200,7 @@ int gameTick(int state)
                 potentialHit = 0; 
             }
 
-            if(tmpObstacle[0] == FRIENDLY && !ducking)
+            if(tmpObstacle[0] == FRIENDLY && !dodging)
             {
                 if(currentScore > 0)
                 {
