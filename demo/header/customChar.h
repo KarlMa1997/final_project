@@ -4,7 +4,7 @@
 
 
 #define PL_STATIONARY 0
-#define MONSTER 1
+#define ENEMY 1
 #define PL_KNEEL 2
 #define FRIENDLY 4
 
@@ -13,7 +13,7 @@ unsigned char playerStationary[8] = {
     0x07, 0x04, 0x0A, 0x13
 };
 
-unsigned char monsterNPC[8] = {
+unsigned char enemyNPC[8] = {
     0x11, 0x0A, 0x0E, 0x11,
     0x11, 0x0E, 0x04, 0x0A
 };
