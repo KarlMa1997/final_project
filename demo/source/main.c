@@ -50,7 +50,7 @@ int main(void)
     TimerOn();
 
     LCD_Custom(PL_STATIONARY, playerStationary);
-    LCD_Custom(MONSTER, monsterNPC); 
+    LCD_Custom(ENEMY, enemyNPC); 
     LCD_Custom(PL_KNEEL, playerKneel); 
     LCD_Custom(FRIENDLY, friendlyNPC); 
     LCD_Cursor(ROW1_BEGIN);
