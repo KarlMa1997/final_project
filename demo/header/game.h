@@ -92,7 +92,7 @@ int gameTick(int state)
                 state = SCROLL; 
             }
 
-            if((tmpObstacle[0] == MONSTER && !dodging))
+            if((tmpObstacle[0] == ENEMY && !dodging))
             {
                 LCD_ClearScreen();
                 LCD_DisplayString(1, "Game Over");
@@ -189,7 +189,7 @@ int gameTick(int state)
         {
             inMenu = 0;
             crosshairPos = getNextSprite(tmpObstacle, LCD_ROW_SIZE);
-            if(potentialHit && (tmpObstacle[crosshairPos] == MONSTER))
+            if(potentialHit && (tmpObstacle[crosshairPos] == ENEMY))
             {
                 potentialHit = 0;
                 currentScore++;
