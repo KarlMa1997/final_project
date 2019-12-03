@@ -18,12 +18,12 @@ enum MovementFlag
 {
     FALSE,
     TRUE
-} ducking;
+} dodging;
 
 enum PlayerMovementStates
 {
     WAIT,
-    DUCK 
+    DODGE 
 };
 
 void spriteUpdate(unsigned char currSprite)
@@ -45,7 +45,7 @@ int playerMovementTick(int state)
             {
                 if(D)
                 {
-                    state = DUCK; 
+                    state = DODGE; 
 
                     LCD_Cursor(ROW1_BEGIN);
                     LCD_WriteData(' ');
@@ -58,11 +58,11 @@ int playerMovementTick(int state)
             break;
         }
 
-        case DUCK:
+        case DODGE:
         {
             if(D) 
             {
-                state = DUCK; 
+                state = DODGE; 
             }
             else
             {
@@ -83,14 +83,14 @@ int playerMovementTick(int state)
         case WAIT: 
         {
             count = 0; 
-            ducking = FALSE;
+            dodging = FALSE;
             
             break;
         }
 
-        case DUCK:
+        case DODGE:
         {
-            ducking = TRUE;
+            dodging = TRUE;
             
             LCD_Cursor(ROW2_BEGIN);
             LCD_WriteData(PL_KNEEL);
